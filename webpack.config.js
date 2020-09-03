@@ -36,7 +36,7 @@ module.exports = {
     plugins: [
         // extract css into dedicated file
         new MiniCssExtractPlugin({
-            filename: "./css/build/main.min.css",
+            filename: "./sass/build/main.min.css",
         }),
     ],
     optimization: {
