@@ -1,0 +1,38 @@
+{
+    "name": "lass",
+    "version": "1.0.0",
+    "description": "=== WP Bootstrap Starter ===",
+    "main": "index.js",
+    "scripts": {
+        "build": "webpack --mode development",
+        "dist": "webpack --mode production",
+        "watch": "webpack --watch --mode development"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ApinisMikelis/lass.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/ApinisMikelis/lass/issues"
+    },
+    "homepage": "https://github.com/ApinisMikelis/lass#readme",
+    "devDependencies": {
+        "babel-core": "^6.26.3",
+        "babel-loader": "^8.1.0",
+        "babel-preset-env": "^1.7.0",
+        "css-loader": "^4.2.2",
+        "mini-css-extract-plugin": "^0.11.0",
+        "node-sass": "^4.14.1",
+        "optimize-css-assets-webpack-plugin": "^5.0.4",
+        "sass-loader": "^10.0.2",
+        "uglifyjs-webpack-plugin": "^2.2.0"
+    },
+    "dependencies": {
+        "@babel/core": "^7.11.6",
+        "webpack": "^4.44.1",
+        "webpack-cli": "^3.3.12"
+    }
+}
