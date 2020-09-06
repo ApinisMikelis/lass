@@ -244,19 +244,6 @@ h5 {
     line-height: 17.5px;
 }
 
-p {
-    margin-bottom: 1.5em;
-}
-h1.entry-title {
-    font-size: 1.31rem;
-    border-bottom: 1px solid #eaecef;
-}
-h2.entry-title {
-    border-bottom: 1px solid #eaecef;
-}
-h3.widget-title {
-    font-size: 1.2rem;
-}
 
 /*--------------------------------------------------------------
 # Elements
