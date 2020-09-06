@@ -7,5 +7,10 @@
 
 // Modules
 @import "brand";
+@import "icons";
 @import "site-header";
 @import "widgets";
+
+body {
+    @include main-font;
+}

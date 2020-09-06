@@ -1,0 +1,16 @@
+@mixin icon {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+
+@mixin calendar-icon {
+    content: "\f073";
+}
+
+@mixin contact-icon {
+    content: "\f3cd";
+}
+
+@mixin info-icon {
+    content: "\f129";
+}

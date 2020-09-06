@@ -13,22 +13,57 @@
     }
 
     .navbar-nav {
+        @mixin main-menu-hover {
+            color: $brand-subtle-gray;
+            border-bottom: 3px solid $brand-subtle-gray;
+        }
+
         li {
+            &:not(:last-child) {
+                margin-right: 1rem;
+            }
+
             a {
                 color: $brand-gray;
                 padding: 0.5rem;
-                font-weight: 500;
-                font-size: 0.875rem;
-                transition: color 300ms ease-in-out;
+                font-size: $font-larger;
+                border-bottom: 3px solid transparent;
+
+                transition: all 300ms ease-in-out;
 
                 &:hover {
-                    color: $brand-main;
+                    @include main-menu-hover;
                 }
             }
 
             &.current_page_item {
                 a {
-                    color: $brand-main;
+                    @include main-menu-hover;
+                }
+            }
+
+            &.icon {
+                a::before {
+                    @include icon;
+                    margin-right: 0.8rem;
+                }
+
+                &.calendar {
+                    a::before {
+                        @include calendar-icon;
+                    }
+                }
+
+                &.contact {
+                    a::before {
+                        @include contact-icon;
+                    }
+                }
+
+                &.info {
+                    a::before {
+                        @include info-icon;
+                    }
                 }
             }
         }

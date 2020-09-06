@@ -369,15 +369,6 @@ a.page-scroller {
     padding-right: 0;
 }
 
-body:not(.theme-preset-active) #masthead .navbar-nav > li > a:hover,
-body:not(.theme-preset-active)
-    #masthead
-    .navbar-nav
-    > li.current_page_item
-    > a {
-    font-weight: 600;
-}
-
 .navbar-brand {
     height: auto;
 }

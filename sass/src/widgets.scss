@@ -13,13 +13,32 @@ aside#secondary {
             .menu-item,
             .nav-item {
                 .nav-link {
+                    position: relative;
+                    z-index: 1;
                     font-size: 1rem;
-                    border-radius: 0.3rem;
+                    border-radius: $border-radius;
 
                     &:hover {
-                        @include secondary-gradient;
                         color: $brand-subtle-gray;
                     }
+                }
+
+                .nav-link:hover::before {
+                    opacity: 1;
+                }
+
+                .nav-link::before {
+                    position: absolute;
+                    content: "";
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    z-index: -1;
+                    transition: opacity 0.2s linear;
+                    border-radius: $border-radius;
+                    opacity: 0;
+                    @include secondary-gradient;
                 }
 
                 &.current-menu-item {

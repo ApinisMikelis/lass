@@ -1,12 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+
 $brand-main: #9e3039;
 $brand-secondary: #a06774;
 $brand-gray: #eddfe2;
 $brand-subtle-gray: #fff6f5;
 
 $padding: 1rem;
+$border-radius: 0.3rem;
+
+@mixin main-font {
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 1rem;
+}
+
+$font-larger: 1.2rem;
 
 @mixin primary-gradient {
-    background-image: linear-gradient(
+    background: linear-gradient(
         to right bottom,
         #9e3039,
         #a83844,
@@ -24,7 +34,7 @@ $padding: 1rem;
 }
 
 @mixin secondary-gradient {
-    background-image: linear-gradient(
+    background: linear-gradient(
         to left bottom,
         #fff6f5,
         #f3e6e5,
