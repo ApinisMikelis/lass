@@ -15,6 +15,9 @@
 // Sections
 @import "sections/members";
 
+// Elements
+@import "elements/breadcrumbs";
+
 body {
     @include main-font;
 }

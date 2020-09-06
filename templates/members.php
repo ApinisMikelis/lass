@@ -8,10 +8,12 @@ get_sidebar();
 ?>
 
     <section id="primary" class="content-area col-sm-12 col-lg-9">
+
+        <?php get_template_part('templates/breadcrumbs'); ?>
         
         <main id="main" class="site-main" role="main">
 
-            <h1 class="entry-title"><?php echo the_title(); ?></h1>
+            <?php get_template_part( 'template-parts/content', 'page' ); ?>
 
             <h2><?php esc_html_e( 'Juridiskie biedri', 'wp-bootstrap-starter' ); ?></h2>
 

@@ -7,6 +7,9 @@ get_header();
 get_sidebar();
 ?>
     <section id="primary" class="content-area col-sm-12 col-lg-9">
+
+        <?php get_template_part('templates/breadcrumbs'); ?>
+
         <main id="main" class="site-main" role="main">
 
             <?php
@@ -14,15 +17,11 @@ get_sidebar();
 
                 get_template_part( 'template-parts/content', 'page' );
 
-                // If comments are open or we have at least one comment, load up the comment template.
-                if ( comments_open() || get_comments_number() ) :
-                    comments_template();
-                endif;
-            endwhile; // End of the loop.
+            endwhile;
             ?>
 
-        </main><!-- #main -->
-    </section><!-- #primary -->
+        </main>
+    </section>
 
 <?php
 get_footer();

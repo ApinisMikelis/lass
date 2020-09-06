@@ -36,7 +36,8 @@
                 }
             }
 
-            &.current_page_item {
+            &.current_page_item,
+            &.current-page-ancestor {
                 a {
                     @include main-menu-hover;
                 }

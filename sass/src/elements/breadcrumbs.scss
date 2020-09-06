@@ -1,0 +1,14 @@
+#breadcrumbs {
+    padding: $small-padding 0;
+    margin-bottom: $margin;
+
+    span:only-child {
+        .current-item {
+            display: none;
+        }
+    }
+
+    .separator {
+        margin: 0 $small-margin;
+    }
+}
