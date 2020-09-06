@@ -1,5 +1,6 @@
 #masthead {
     background: $brand-gray;
+    @include primary-gradient;
 
     .navbar-brand {
         a {
@@ -14,7 +15,7 @@
     .navbar-nav {
         li {
             a {
-                color: $brand-secondary;
+                color: $brand-gray;
                 padding: 0.5rem;
                 font-weight: 500;
                 font-size: 0.875rem;

@@ -1,3 +1,21 @@
 $brand-main: #9e3039;
 $brand-secondary: #a06774;
 $brand-gray: #eddfe2;
+
+@mixin primary-gradient {
+    background-image: linear-gradient(
+        to right bottom,
+        #9e3039,
+        #a83844,
+        #b24050,
+        #bc495c,
+        #c65168,
+        #c7556d,
+        #c75a72,
+        #c85e77,
+        #c06076,
+        #b86175,
+        #b06274,
+        #a86373
+    );
+}
