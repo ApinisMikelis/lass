@@ -1,0 +1,17 @@
+#subpage-navigation {
+    background: $brand-gray;
+
+    .nav {
+        .nav-item {
+            .nav-link {
+                padding: $padding;
+                transition: all 0.3s ease-in-out;
+
+                &:hover,
+                &.active {
+                    background: $brand-subtle-gray;
+                }
+            }
+        }
+    }
+}

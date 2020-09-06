@@ -244,7 +244,6 @@ h5 {
     line-height: 17.5px;
 }
 
-
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
@@ -677,11 +676,6 @@ a img.aligncenter {
     display: none;
 }
 
-.nav > li > a:focus,
-.nav > li > a:hover {
-    background-color: #eee;
-    text-decoration: none;
-}
 .half-rule {
     width: 6rem;
     margin: 2.5rem 0;
