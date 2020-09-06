@@ -9,6 +9,7 @@ $padding: 1rem;
 $small-padding: 0.5rem;
 
 $margin: 1rem;
+$medium-margin: 1.5rem;
 $small-margin: 0.5rem;
 
 $border-radius: 0.3rem;
@@ -54,11 +55,4 @@ $font-larger: 1.2rem;
         #ad707a,
         #a86373
     );
-}
-
-@mixin card {
-    padding: $padding;
-    background: $brand-subtle-gray;
-    box-shadow: 0 10px 30px $brand-gray;
-    border-radius: 0.5rem;
 }

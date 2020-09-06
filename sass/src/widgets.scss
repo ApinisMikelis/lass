@@ -13,6 +13,7 @@ aside#secondary {
         &.widget_nav_menu,
         &.widget_archive {
             @include card;
+            padding: $padding;
 
             .menu-item,
             .nav-item {

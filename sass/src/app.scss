@@ -5,19 +5,23 @@
 
 @import "node_modules/bootstrap/scss/bootstrap";
 
-// Modules
 @import "brand";
 @import "icons";
+
+// Elements
+@import "elements/card";
+@import "elements/breadcrumbs";
+@import "elements/subpage-navigation";
+@import "elements/post-categories.scss";
+
+// Modules
 @import "site-header";
 @import "content";
 @import "widgets";
 
 // Sections
 @import "sections/members";
-
-// Elements
-@import "elements/breadcrumbs";
-@import "elements/subpage-navigation";
+@import "sections/blog";
 
 body {
     @include main-font;

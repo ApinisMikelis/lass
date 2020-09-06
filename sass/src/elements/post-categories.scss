@@ -1,0 +1,19 @@
+.post-categories {
+    position: absolute;
+    bottom: $medium-margin;
+    left: $medium-margin;
+
+    .category {
+        padding: $small-padding;
+        background: $brand-main;
+        color: $brand-subtle-gray;
+
+        &:not(:last-child) {
+            margin-right: $small-margin;
+        }
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
