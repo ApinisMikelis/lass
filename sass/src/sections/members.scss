@@ -1,0 +1,13 @@
+.page-template-members {
+    .card-deck {
+        .card {
+            margin: 0 0 2rem 0;
+
+            .btn {
+                border: none;
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+            }
+        }
+    }
+}

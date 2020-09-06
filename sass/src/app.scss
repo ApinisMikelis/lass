@@ -12,6 +12,9 @@
 @import "content";
 @import "widgets";
 
+// Sections
+@import "sections/members";
+
 body {
     @include main-font;
 }
