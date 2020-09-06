@@ -1,0 +1,35 @@
+#masthead {
+    background: $brand-gray;
+
+    .navbar-brand {
+        a {
+            display: block;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .navbar-nav {
+        li {
+            a {
+                color: $brand-secondary;
+                padding: 0.5rem;
+                font-weight: 500;
+                font-size: 0.875rem;
+                transition: color 300ms ease-in-out;
+
+                &:hover {
+                    color: $brand-main;
+                }
+            }
+
+            &.current_page_item {
+                a {
+                    color: $brand-main;
+                }
+            }
+        }
+    }
+}
