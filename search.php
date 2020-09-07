@@ -32,7 +32,7 @@ get_header(); ?>
 
 			endwhile;
 
-			the_posts_navigation();
+			get_template_part('templates/posts-navigation');
 
 		else :
 
