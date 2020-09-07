@@ -14,3 +14,11 @@
 @mixin info-icon {
     content: "\f129";
 }
+
+@mixin arrow-left-icon {
+    content: "\f060";
+}
+
+@mixin arrow-right-icon {
+    content: "\f061";
+}

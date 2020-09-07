@@ -1,0 +1,32 @@
+.posts-navigation {
+    .nav-links {
+        .nav-next,
+        .nav-previous {
+            @include main-font;
+
+            font-size: 1.2rem;
+
+            a:hover {
+                text-decoration: none;
+            }
+
+            a::before,
+            a::after {
+                @include icon;
+                padding: $small-padding;
+            }
+        }
+
+        .nav-previous {
+            a::before {
+                @include arrow-left-icon;
+            }
+        }
+
+        .nav-next {
+            a::after {
+                @include arrow-right-icon;
+            }
+        }
+    }
+}
