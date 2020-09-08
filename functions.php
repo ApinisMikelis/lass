@@ -66,11 +66,6 @@ function wp_bootstrap_starter_setup() {
 	// Add theme support for selective refresh for widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
 
-    function wp_boostrap_starter_add_editor_styles() {
-        add_editor_style( 'custom-editor-style.css' );
-    }
-    add_action( 'admin_init', 'wp_boostrap_starter_add_editor_styles' );
-
 }
 endif;
 add_action( 'after_setup_theme', 'wp_bootstrap_starter_setup' );

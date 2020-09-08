@@ -1,6 +1,8 @@
 // Guttenberg and Block Editor Styles
 @import "../../../../../wp-includes/css/dist/block-library/style.css";
 
+@import "startup";
+
 @import "bootstrap/bootstrap-overrides";
 
 @import "node_modules/bootstrap/scss/bootstrap";
