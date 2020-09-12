@@ -1,0 +1,44 @@
+#search-bar {
+    padding-top: 0;
+    height: 0;
+    overflow: hidden;
+    background: $brand-subtle-gray;
+    transition: all 400ms ease-in-out;
+
+    &.active {
+        padding-top: 1rem;
+        height: 6.5vh;
+    }
+
+    .search-form {
+        position: relative;
+        padding: 0;
+        margin: 0;
+
+        label {
+            display: block;
+
+            input {
+                border: none;
+                border-radius: 0;
+            }
+        }
+
+        .search-submit {
+            position: absolute;
+            padding: $small-padding $padding;
+            height: 100%;
+            top: 0;
+            right: 0;
+            border: none;
+            border-radius: 0;
+            color: $brand-main;
+            background: $brand-gray;
+
+            .icon-search {
+                @include icon;
+                @include search;
+            }
+        }
+    }
+}

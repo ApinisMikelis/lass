@@ -9,9 +9,11 @@
 
 @import "brand";
 @import "icons";
+@import "breakpoints";
 
 // Elements
 @import "elements/card";
+@import "elements/searchbar.scss";
 @import "elements/breadcrumbs";
 @import "elements/subpage-navigation";
 @import "elements/post-categories";

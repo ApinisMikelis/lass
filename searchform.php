@@ -1,9 +1,28 @@
-<form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-    <label>
-        <input type="search" class="search-field form-control" placeholder="<?php echo esc_attr_x( 'Search &hellip;', 'placeholder', 'wp-bootstrap-starter' ); ?>" value="<?php echo esc_attr( get_search_query() ); ?>" name="s" title="<?php _ex( 'Search for:', 'label', 'wp-bootstrap-starter' ); ?>">
-    </label>
-    <input type="submit" class="search-submit btn btn-default" value="<?php echo esc_attr_x( 'Search', 'submit button', 'wp-bootstrap-starter' ); ?>">
-</form>
+<div id="search-bar">
 
+    <div class="container align-middle">
 
+        <form role="search" method="get" class="search-form col" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+        
+            <label class="row">
 
+                <input
+                type="search"
+                class="search-field form-control"
+                placeholder="<?php echo esc_attr_x( 'Meklēt &hellip;', 'placeholder', 'wp-bootstrap-starter' ); ?>"
+                value="<?php echo esc_attr( get_search_query() ); ?>"
+                name="s"
+                title="<?php _ex( 'Search for:', 'label', 'wp-bootstrap-starter' ); ?>">
+
+            </label>
+        
+            <input
+            type="submit"
+            class="row search-submit btn btn-default icon-search"
+            value="<?php echo esc_attr_x( 'Meklēt', 'submit button', 'wp-bootstrap-starter' ); ?>">
+        
+        </form>
+
+    </div>
+
+</div>

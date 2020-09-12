@@ -1,6 +1,10 @@
 #subpage-navigation {
     background: $brand-gray;
 
+    .container {
+        padding-right: 0;
+    }
+
     .nav {
         .nav-item {
             .nav-link {

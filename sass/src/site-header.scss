@@ -69,4 +69,22 @@
             }
         }
     }
+
+    .search-toggle {
+        border: none;
+        background: none;
+        color: $brand-subtle-gray;
+
+        &:focus,
+        &:active {
+            outline: none;
+        }
+    }
+
+    @include respond-below(lg) {
+        .search-toggle {
+            position: absolute;
+            right: 5rem;
+        }
+    }
 }
