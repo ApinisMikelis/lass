@@ -23,19 +23,23 @@ $border-radius: 0.3rem;
 $font-larger: 1.2rem;
 
 @mixin primary-gradient {
-    background: linear-gradient(
-        to right bottom,
+    background-image: linear-gradient(
+        to right top,
         #9e3039,
-        #a83844,
-        #b24050,
-        #bc495c,
-        #c65168,
-        #c7556d,
-        #c75a72,
-        #c85e77,
-        #c06076,
-        #b86175,
-        #b06274,
+        #a73840,
+        #b04147,
+        #ba494f,
+        #c35156
+    );
+}
+
+@mixin primary-flag {
+    background-image: linear-gradient(
+        to right top,
+        #9e3039,
+        #a23d49,
+        #a54a58,
+        #a75766,
         #a86373
     );
 }
