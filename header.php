@@ -29,7 +29,7 @@
 	
     <header id="masthead" class="site-header navbar-static-top <?php echo wp_bootstrap_starter_bg_class(); ?>" role="banner">
         <div class="container">
-            <nav class="navbar navbar-expand-xl p-0">
+            <nav class="navbar navbar-dark navbar-expand-xl p-0">
                 <div class="navbar-brand">
 
                     <?php if ( get_theme_mod( 'wp_bootstrap_starter_logo' ) ): ?>

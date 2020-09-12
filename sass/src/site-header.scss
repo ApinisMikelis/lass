@@ -2,6 +2,11 @@
     background: $brand-gray;
     @include primary-gradient;
 
+    .navbar-toggler {
+        border: none;
+        outline: none;
+    }
+
     .navbar-brand {
         a {
             display: block;
@@ -68,10 +73,19 @@
                 }
             }
         }
+
+        @include respond-below(lg) {
+            display: block;
+
+            li {
+                display: inline-block;
+            }
+        }
     }
 
     .search-toggle {
         border: none;
+        opacity: 0.55;
         background: none;
         color: $brand-subtle-gray;
 
