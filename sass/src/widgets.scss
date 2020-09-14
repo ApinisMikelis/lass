@@ -11,13 +11,23 @@ aside#secondary {
         }
 
         &.widget_nav_menu,
-        &.widget_archive {
+        &.widget_archive,
+        &.widget_subpages {
             @include card;
             padding: $padding;
 
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+
             .menu-item,
-            .nav-item {
-                .nav-link {
+            .nav-item,
+            li {
+                a {
+                    display: block;
+                    padding: 0.5rem 1rem;
                     position: relative;
                     z-index: 1;
                     font-size: 1rem;
@@ -25,14 +35,15 @@ aside#secondary {
 
                     &:hover {
                         color: $brand-subtle-gray;
+                        text-decoration: none;
                     }
                 }
 
-                .nav-link:hover::before {
+                a:hover::before {
                     opacity: 1;
                 }
 
-                .nav-link::before {
+                a::before {
                     position: absolute;
                     content: "";
                     top: 0;
@@ -47,13 +58,19 @@ aside#secondary {
                 }
 
                 &.current-menu-item,
-                &.current-page-ancestor {
-                    .nav-link {
+                &.current-page-ancestor,
+                &.widget_subpages_current_page {
+                    .nav-link,
+                    a {
                         @include secondary-gradient;
                         color: $brand-subtle-gray;
                     }
                 }
             }
+        }
+
+        &.widget_subpages {
+            background: $brand-subtle-gray;
         }
     }
 }

@@ -67,8 +67,6 @@
         </div>
     </header>
     
-    <?php get_template_part('templates/subpage-navigation'); ?>
-    
     <?php get_search_form(); ?>
 
 	<div id="content" class="site-content">
