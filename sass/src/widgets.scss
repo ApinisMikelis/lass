@@ -46,7 +46,8 @@ aside#secondary {
                     @include secondary-gradient;
                 }
 
-                &.current-menu-item {
+                &.current-menu-item,
+                &.current-page-ancestor {
                     .nav-link {
                         @include secondary-gradient;
                         color: $brand-subtle-gray;
