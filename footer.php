@@ -34,6 +34,8 @@
 <?php endif; ?>
 </div><!-- #page -->
 
+<a id="back-to-top-btn"><i class="fas fa-arrow-up"></i></a>
+
 <?php wp_footer(); ?>
 </body>
 </html>
