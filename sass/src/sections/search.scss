@@ -1,0 +1,8 @@
+body.search-results {
+    span.keyword {
+        @include secondary-gradient;
+        padding: 0 $padding;
+        color: $white;
+        border-radius: $border-radius;
+    }
+}
