@@ -71,6 +71,12 @@
                         @include info-icon;
                     }
                 }
+
+                &.photo-gallery {
+                    a::before {
+                        @include gallery;
+                    }
+                }
             }
         }
 
