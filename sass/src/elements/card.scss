@@ -9,3 +9,11 @@
 .card {
     @include card;
 }
+
+@mixin card-deck {
+    .card-deck {
+        .card {
+            margin: 0 0 2rem 0;
+        }
+    }
+}
