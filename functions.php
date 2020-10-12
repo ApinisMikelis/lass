@@ -267,3 +267,9 @@ require get_template_directory() . '/inc/plugin-compatibility/plugin-compatibili
 if ( ! class_exists( 'wp_bootstrap_navwalker' )) {
     require_once(get_template_directory() . '/inc/wp_bootstrap_navwalker.php');
 }
+
+// FIX GALLERY BACKDROP ISSUE
+add_action('admin_head', 'fix_gallery_backdrop');
+function fix_gallery_backdrop() {
+  echo '<style>.acf-gallery-backdrop { display: none;}</style>';
+}

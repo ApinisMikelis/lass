@@ -1,0 +1,12 @@
+.page-template-gallery {
+    @include card-deck;
+
+    .image-count {
+        font-size: 2rem;
+        color: $brand-main;
+
+        i {
+            padding-right: $padding;
+        }
+    }
+}
