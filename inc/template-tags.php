@@ -11,7 +11,7 @@ if ( ! function_exists( 'wp_bootstrap_starter_posted_on' ) ) :
 /**
  * Prints HTML with meta information for the current post-date/time and author.
  */
-function wp_bootstrap_starter_posted_on() {
+function wp_bootstrap_starter_posted_on($should_link) {
 	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
         $time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
@@ -22,10 +22,14 @@ function wp_bootstrap_starter_posted_on() {
 		esc_html( get_the_date() )
 	);
 
-	$posted_on = sprintf(
-		esc_html_x( 'Publicēts %s', 'post date', 'wp-bootstrap-starter' ),
-		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
-	);
+    if($should_link) {
+        $posted_on = sprintf(
+            esc_html_x( 'Publicēts %s', 'post date', 'wp-bootstrap-starter' ),
+            '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+        );
+    } else {
+        $posted_on = $time_string;
+    }
 
 	echo '<span class="posted-on">' . $posted_on . '</span>';
 
