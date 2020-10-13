@@ -460,7 +460,7 @@ a.page-scroller {
 .posts-navigation .nav-previous,
 .post-navigation .nav-previous {
     float: left;
-    width: 50%;
+    width: 45%;
 }
 
 .comment-navigation .nav-next,
@@ -468,7 +468,7 @@ a.page-scroller {
 .post-navigation .nav-next {
     float: right;
     text-align: right;
-    width: 50%;
+    width: 45%;
 }
 .comment-content.card-block {
     padding: 20px;
@@ -480,19 +480,28 @@ a.page-scroller {
 
 .post-navigation .nav-previous a,
 .post-navigation .nav-next a {
-    border: 1px solid #ddd;
     border-radius: 0.938rem;
     display: inline-block;
     padding: 0.313rem 0.875rem;
+    background: $brand-subtle-gray;
     text-decoration: none;
+    transition: background 200ms ease-in-out 10ms;
+}
+
+.post-navigation .nav-next a::after,
+.post-navigation .nav-previous a::after {
+    @include icon;
+    display: block;
+    padding: 0.5rem;
+    font-size: 1.5rem;
 }
 
 .post-navigation .nav-next a::after {
-    content: " \2192";
+    content: "\f061";
 }
 
-.post-navigation .nav-previous a::before {
-    content: "\2190 ";
+.post-navigation .nav-previous a::after {
+    content: "\f060";
 }
 
 .post-navigation .nav-previous a:hover,

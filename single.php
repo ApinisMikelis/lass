@@ -7,7 +7,9 @@
  * @package WP_Bootstrap_Starter
  */
 
-get_header(); ?>
+get_header();
+get_sidebar();
+?>
 
 	<section id="primary" class="content-area col-sm-12 col-lg-9">
 		<main id="main" class="site-main" role="main">
@@ -15,21 +17,18 @@ get_header(); ?>
 		<?php
 		while ( have_posts() ) : the_post();
 
-			get_template_part( 'template-parts/content', get_post_format() );
+			get_template_part( 'template-parts/content', get_post_format() ); ?>
 
-			    the_post_navigation();
+			<h3><?php esc_html_e( 'Citi raksti', 'wp-bootstrap-starter' ); ?></h3>
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
+			<?php the_post_navigation();
 
-		endwhile; // End of the loop.
+		endwhile;
 		?>
 
-		</main><!-- #main -->
-	</section><!-- #primary -->
+		</main>
+	</section>
 
 <?php
-get_sidebar();
+
 get_footer();

@@ -1,0 +1,9 @@
+.wp-block-image {
+    figure {
+        figcaption {
+            margin: 0;
+            padding: $padding;
+            background: $brand-subtle-gray;
+        }
+    }
+}
