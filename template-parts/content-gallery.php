@@ -31,6 +31,9 @@
                 <a class="fancybox" rel="<?php echo $group; ?>" href="<?php echo $full_image_url; ?>">
 
                     <?php if ($i == 0) : ?>
+                        <span class="gallery-overlay">
+                            <span class="fas fa-search"></span>
+                        </span>
 
                         <img src="<?php echo $full_image_url; ?>" />
 
@@ -40,13 +43,13 @@
 
             <?php $i++; endforeach; endif; ?>
 
-            <?php get_template_part('templates/blog/post-categories'); ?>
         </div>
         
 
         <div class="card-body">
 
             <header class="entry-header">
+                
                 <?php the_title( '<h2 class="entry-title">','</h2>' ); ?>
                 
                 <div class="entry-meta">

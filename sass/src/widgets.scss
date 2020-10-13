@@ -58,13 +58,33 @@ aside#secondary {
                 }
 
                 &.current-menu-item,
-                &.current-page-ancestor,
-                &.widget_subpages_current_page {
+                &.current-page-ancestor {
                     .nav-link,
                     a {
                         @include secondary-gradient;
                         color: $brand-subtle-gray;
                     }
+                }
+
+                &.widget_subpages_current_page {
+                    @include secondary-gradient;
+                    border-radius: $border-radius;
+                    color: $brand-subtle-gray;
+
+                    &.first-menu-item > a {
+                        @include primary-gradient;
+                    }
+                }
+
+                &.widget_subpages_current_page > a {
+                    color: $brand-subtle-gray;
+                }
+
+                &.widget_subpages_current_page > ul > li {
+                }
+
+                &.widget_subpages_current_page > ul > li > a {
+                    color: $brand-subtle-gray;
                 }
             }
         }
