@@ -3,6 +3,16 @@ h1.entry-title {
     font-weight: 600;
 }
 
+h2.entry-title {
+    a {
+        transition: color 300ms ease-in-out 10ms;
+    }
+
+    a:hover {
+        text-decoration: none;
+    }
+}
+
 .entry-content {
     p {
         margin-bottom: 1.5em;

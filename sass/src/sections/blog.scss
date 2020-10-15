@@ -7,5 +7,23 @@
         .post-thumbnail {
             position: relative;
         }
+
+        .entry-content {
+            .read-more {
+                display: block;
+                margin-top: $margin;
+            }
+        }
+    }
+}
+
+.blog,
+.archive {
+    .card {
+        .entry-content {
+            p {
+                margin-bottom: 0;
+            }
+        }
     }
 }

@@ -39,6 +39,12 @@
 		<div class="entry-content">
 			<?php if ( is_single() ) : the_content(); else : the_excerpt(); endif;
 
+				if ( !is_single() ) { ?>
+					<a class="btn btn-outline-primary read-more" href="<?php the_permalink() ?>">
+						<?php esc_html_e( 'Turpināt lasīt', 'wp-bootstrap-starter' ); ?>
+					</a>
+				<?php };
+
 				wp_link_pages( array(
 					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wp-bootstrap-starter' ),
 					'after'  => '</div>',

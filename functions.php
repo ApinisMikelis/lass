@@ -273,3 +273,11 @@ add_action('admin_head', 'fix_gallery_backdrop');
 function fix_gallery_backdrop() {
   echo '<style>.acf-gallery-backdrop { display: none;}</style>';
 }
+
+// Changing excerpt more
+function custom_excerpt_ending($more) {
+    global $post;
+    remove_filter('excerpt_more', 'custom_excerpt_ending');
+    return "...";
+};
+add_filter('excerpt_more','custom_excerpt_ending');
