@@ -3,6 +3,7 @@
 $brand-main: #9e3039;
 $brand-secondary: #a06774;
 $brand-gray: #eddfe2;
+$brand-dark: #490000;
 $brand-subtle-gray: #fff6f5;
 
 $padding: 1rem;
@@ -25,11 +26,11 @@ $font-larger: 1.2rem;
 @mixin primary-gradient {
     background-image: linear-gradient(
         to right top,
-        #9e3039,
+        $brand-main,
         #88242b,
         #72181e,
         #5d0b12,
-        #490000
+        $brand-dark
     );
 }
 

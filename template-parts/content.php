@@ -12,9 +12,10 @@
 <article class="card" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<div class="post-thumbnail">
-
-		<?php the_post_thumbnail(); ?>
-	<?php get_template_part('templates/blog/post-categories'); ?>
+		<a href="<?php echo the_permalink(); ?>">
+			<?php the_post_thumbnail(); ?>
+		</a>
+		<?php get_template_part('templates/blog/post-categories'); ?>
 	</div>
 	
 
