@@ -21,6 +21,8 @@
 
 <body <?php body_class(); ?>>
 
+<?php get_template_part('template-parts/dev-notices'); ?>
+
 <div id="page" class="site">
 	
     <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'wp-bootstrap-starter' ); ?></a>

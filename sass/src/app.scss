@@ -38,3 +38,7 @@
 body {
     @include main-font;
 }
+
+.dev-notices {
+    padding-top: $padding;
+}
