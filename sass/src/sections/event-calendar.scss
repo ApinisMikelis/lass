@@ -1,0 +1,31 @@
+.event-calendar {
+
+    .event-listing {
+        
+        background: $brand-subtle-gray;
+
+        &:not(:last-child) {
+            margin-bottom: $small-margin;
+        }
+
+        .event-heading {
+            padding: $padding $small-padding;
+
+            .fas {
+                margin-right: .2rem;
+                font-size: 1.3rem;
+                color: $brand-main;
+
+                &.fa-info-circle {
+                    margin: 0 0 0 .2rem;
+                }
+            }
+
+        }
+
+        .event-details {
+            padding: $padding $small-padding;
+        }
+    }
+
+}
