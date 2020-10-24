@@ -2,9 +2,10 @@
     background: $brand-gray;
     @include primary-gradient;
 
-    .navbar-toggler {
-        border: none;
-        outline: none;
+    @include respond-below(md) {
+        .container {
+            padding: 0 $small-padding;
+        }
     }
 
     .navbar-brand {
@@ -14,6 +15,76 @@
             img {
                 width: 100%;
             }
+
+            &.mobile-logo {
+                display: none;
+            }
+        }
+
+        @include respond-below(md) {
+            a {
+                display: none;
+                &.mobile-logo {
+                    display: block;
+                }
+    
+                img {
+                    width: 50%;
+                }
+            }
+        }
+
+    }
+
+    .header-actions {
+        @include respond-below(md) {
+            span {
+                font-size: 2rem;
+            }
+        }
+
+        @include respond-below(lg) {
+            &.order-md-2 {
+                order: 2 !important;
+            }
+        }
+
+        
+
+        .search-toggle {
+            border: none;
+            opacity: 0.55;
+            background: none;
+            color: $brand-subtle-gray;
+            transition: opacity 300ms ease-in-out;
+
+            &.active {
+                opacity: 1;
+            }
+    
+            &:focus,
+            &:active {
+                outline: none;
+            }
+        }
+
+        .navbar-toggler {
+            border: none;
+            outline: none;
+
+            span {
+                opacity: 0.55;
+                color: $brand-subtle-gray;
+                transition: opacity 300ms ease-in-out;
+            }
+            
+
+            &:not(.collapsed) {
+                span {
+                    opacity: 1;
+                }
+            }
+
         }
     }
 
@@ -80,31 +151,35 @@
             }
         }
 
+        @include respond-below(sm) {
+            li.menu-item {
+
+                display: block;
+
+
+
+            }
+        }
+
+        @include respond-below(md) {
+            li.menu-item {
+
+
+                a {
+                    font-size: $mobile-font-size;
+                }
+
+            }
+        }
+
         @include respond-below(lg) {
             display: block;
-
+            padding-top: $small-padding;
+            
             li {
                 display: inline-block;
             }
         }
     }
 
-    .search-toggle {
-        border: none;
-        opacity: 0.55;
-        background: none;
-        color: $brand-subtle-gray;
-
-        &:focus,
-        &:active {
-            outline: none;
-        }
-    }
-
-    @include respond-below(lg) {
-        .search-toggle {
-            position: absolute;
-            right: 5rem;
-        }
-    }
 }

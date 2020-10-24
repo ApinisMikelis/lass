@@ -6,3 +6,13 @@ body.search-results {
         border-radius: $border-radius;
     }
 }
+
+#search-bar {
+    
+    @include respond-below(md) {
+        input {
+            font-size: $mobile-font-size;
+        }
+    }
+
+}

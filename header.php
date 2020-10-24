@@ -48,16 +48,29 @@
 
                 </div>
 
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                <div class="row order-2 order-md-2 order-lg-last header-actions">
+
+                    <button class="search-toggle" type="button" aria-label="Toggle search">
+                        <span class="fas fa-search"></span>
+                    </button>
+                    
+                    <button class="navbar-toggler collapsed"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#main-nav"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="fas fa-bars"></span>
+                    </button>
+
+                </div>
 
                 <?php
                 wp_nav_menu(array(
                 'theme_location'    => 'primary',
                 'container'       => 'div',
                 'container_id'    => 'main-nav',
-                'container_class' => 'collapse navbar-collapse justify-content-end',
+                'container_class' => 'collapse navbar-collapse justify-content-end order-3 order-md-3 order-lg-2',
                 'menu_id'         => false,
                 'menu_class'      => 'navbar-nav',
                 'depth'           => 3,
@@ -65,10 +78,7 @@
                 'walker'          => new wp_bootstrap_navwalker()
                 ));
                 ?>
-
-                <button class="search-toggle" type="button" aria-label="Toggle search">
-                    <span class="fas fa-search"></span>
-                </button>
+                
             </nav>
         </div>
     </header>

@@ -1,6 +1,7 @@
 jQuery(document).ready(function () {
     jQuery(".search-toggle").bind("click", function () {
         jQuery("#search-bar").toggleClass("active");
+        jQuery(".search-toggle").toggleClass("active");
     });
 
     // BACK TO TOP BUTTON
