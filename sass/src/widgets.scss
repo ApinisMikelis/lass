@@ -80,9 +80,6 @@ aside#secondary {
                     color: $brand-subtle-gray;
                 }
 
-                &.widget_subpages_current_page > ul > li {
-                }
-
                 &.widget_subpages_current_page > ul > li > a {
                     color: $brand-subtle-gray;
                 }
@@ -91,6 +88,28 @@ aside#secondary {
 
         &.widget_subpages {
             background: $brand-subtle-gray;
+        }
+
+        @include respond-below(md) {
+            &.widget_nav_menu,
+            &.widget_archive,
+            &.widget_subpages {
+                padding: 0;
+                
+                .menu-item,
+                .nav-item,
+                li {
+                    a { 
+                        border-radius: 0;
+                        padding: 1rem;
+
+                        &::before {
+                            border-radius: 0;
+                        }
+                    }
+
+                }
+            }
         }
     }
 }

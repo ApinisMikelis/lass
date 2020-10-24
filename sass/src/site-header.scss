@@ -116,7 +116,28 @@
             &.current-page-ancestor {
                 a {
                     @include main-menu-hover;
+
+                    &::before {
+                        padding-left: $small-padding;
+                    }
                 }
+
+
+            }
+
+            @include respond-below(md) {
+                &.current_page_item,
+                &.current-page-ancestor {
+                    a {
+                        background: $brand-subtle-gray;
+                        color: $brand-main;
+                        border-radius: $border-radius;
+
+
+                    }
+
+                }
+    
             }
 
             &.icon {

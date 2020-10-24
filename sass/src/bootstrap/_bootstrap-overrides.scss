@@ -2,3 +2,14 @@ $theme-colors: (
     "primary": #9e3039,
     "danger": #ff4136,
 );
+
+@include respond-below(md) {
+
+    #content,
+    #masthead {
+        .container, .container-sm {
+            max-width: initial;
+        }
+    }
+
+}

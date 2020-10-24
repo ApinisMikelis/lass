@@ -1,4 +1,16 @@
 aside#secondary {
+
+    @include respond-below(md) {
+
+        * {
+
+            font-size: $mobile-font-size !important;
+        }
+
+
+    }
+
+
     .sidebar-nav-toggler {
 
         margin-bottom: $margin;

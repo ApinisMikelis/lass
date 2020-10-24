@@ -17,7 +17,14 @@ h2.entry-title {
 .entry-content {
     p {
         margin-bottom: 1.5em;
-        font-size: 1.1rem;
         line-height: 2rem;
+    }
+
+    
+}
+
+#primary {
+    @include respond-below(md) {
+        font-size: $mobile-font-size;
     }
 }

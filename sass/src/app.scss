@@ -1,16 +1,16 @@
 // Guttenberg and Block Editor Styles
 @import "../../../../../wp-includes/css/dist/block-library/style.css";
-
+@import "breakpoints";
+@import "bootstrap/bootstrap-overrides";
 @import "brand";
 @import "mobile";
 @import "icons";
 @import "startup";
 
-@import "bootstrap/bootstrap-overrides";
 
 @import "node_modules/bootstrap/scss/bootstrap";
 
-@import "breakpoints";
+
 
 // Elements
 @import "elements/card";
