@@ -2,6 +2,10 @@ h3.widget-title {
     font-weight: 300;
 }
 
+.sharing-widget {
+    margin: $margin 0;
+}
+
 aside#secondary {
     .widget {
         &.widget_search {

@@ -11,21 +11,15 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-    <header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</header>
-
 	<div class="entry-content">
 
-        <div class="container">
+
+
+            <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
             <div class="row">
 
-                <div class="col-sm-12 col-lg-6">
-                    <?php the_content(); ?>
-                </div>
-
-                <div class="col-sm-12 col-lg-6">
+                <div class="col-sm-12 col-lg-6 order-md-2 banner">
 
                     <div class="post-thumbnail">
                         <a href="<?php echo the_permalink(); ?>">
@@ -33,6 +27,10 @@
                         </a>
                     </div>
 
+                </div>
+
+                <div class="col-sm-12 col-lg-6 order-md-1 description">
+                    <?php the_content(); ?>
                 </div>
 
             </div>
@@ -47,7 +45,9 @@
 
             </div>
 
-        </div>
+            <?php get_template_part('templates/sharing-widget'); ?>
+
+        
 
     </div>
 

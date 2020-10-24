@@ -21,11 +21,11 @@ $slug = $post->post_name;
     
         <div class="row event-heading">
 
-            <div class="col-2">
+            <div class="col col-12 col-sm-4 col-md-3">
                 <?php echo $event_date; ?>
             </div>
 
-            <div class="col-4 event-title">
+            <div class="col col-12 col-sm-4 col-md-4 event-title">
                 
                 <a data-toggle="collapse" href="#<?php echo $slug; ?>"
                     role="button" aria-expanded="false" aria-controls="collapse">
@@ -34,7 +34,7 @@ $slug = $post->post_name;
 
             </div>
 
-            <div class="col-2">
+            <div class="col col-md-2 d-none d-sm-none d-md-block">
 
                 <?php if ($results_url) : ?>
 
@@ -48,7 +48,7 @@ $slug = $post->post_name;
                 
             </div>
 
-            <div class="col-4">
+            <div class="col col-12 col-sm-4 col-md-3">
 
                 <i class="fas fa-map-marker-alt"></i>
 
@@ -65,6 +65,20 @@ $slug = $post->post_name;
         <div class="row event-details bg-light collapse" id="<?php echo $slug; ?>">
 
             <div class="col-12">
+
+                <div class="results-block d-block d-sm-block d-md-none">
+
+                    <?php if ($results_url) : ?>
+
+                        <i class="fas fa-award"></i>
+
+                        <a href="<?php echo $results_url; ?>" target="_blank">
+                            <?php echo __( 'Rezultāti', 'wp-bootstrap-starter' ); ?>
+                        </a>
+
+                    <?php endif; ?>
+                
+                </div>
             
                 <?php the_content(); ?>
 

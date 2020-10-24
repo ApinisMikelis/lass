@@ -1,10 +1,26 @@
 .page-template-event {
 
-    .post-thumbnail {
-        img {
-            border-radius: $border-radius-larger;
-        }
+    .description {
+        margin-bottom: 1rem;
     }
+
+    .banner {
+        margin-bottom: $margin;
+
+        .post-thumbnail {
+            img {
+                border-radius: $border-radius-larger;
+
+                @include respond-below(lg) {
+                    border-radius: $border-radius-large;
+                }
+            }
+
+        }
+
+        
+    }
+    
 
     .event-calendar {
 
@@ -16,23 +32,28 @@
             &:not(:last-child) {
                 margin-bottom: $small-margin;
             }
+
+            .fas {
+                margin-right: .2rem;
+                font-size: 1.3rem;
+                color: $brand-main;
+
+                &.fa-info-circle {
+                    margin: 0 0 0 .2rem;
+                }
+            }
     
             .event-heading {
+                .col {
+                    padding: 0 .5rem;
+                }
                 padding: $padding $small-padding;
 
                 .event-title {
                     font-weight: 600;
                 }
     
-                .fas {
-                    margin-right: .2rem;
-                    font-size: 1.3rem;
-                    color: $brand-main;
-    
-                    &.fa-info-circle {
-                        margin: 0 0 0 .2rem;
-                    }
-                }
+                
     
             }
     
@@ -41,9 +62,17 @@
                 border-bottom-left-radius: $border-radius;
                 border-bottom-right-radius: $border-radius;
 
+                .results-block {
+                    margin-bottom: $margin;
+                }
+
                 .close-event-btn {
                     display: block;
                     width: 100%;
+
+                    @include respond-below(lg) {
+                        font-size: $mobile-font-size;
+                    }
                 }
             }
         }
