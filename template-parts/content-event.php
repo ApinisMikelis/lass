@@ -22,7 +22,7 @@
                 <div class="col-sm-12 col-lg-6 order-md-2 banner">
 
                     <div class="post-thumbnail">
-                        <a href="<?php echo the_permalink(); ?>">
+                        <a href="<?php echo get_the_post_thumbnail_url(); ?>">
                             <?php the_post_thumbnail(); ?>
                         </a>
                     </div>
