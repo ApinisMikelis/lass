@@ -12,6 +12,10 @@
             .read-more {
                 display: block;
                 margin-top: $margin;
+
+                @include respond-below(md) {
+                    font-size: $mobile-font-size;
+                }
             }
         }
     }
