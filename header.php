@@ -50,7 +50,12 @@
 
                 <div class="row order-2 order-md-2 order-lg-last header-actions">
 
-                    <button class="search-toggle" type="button" aria-label="Toggle search">
+                    <button class="search-toggler collapsed"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#search-bar"
+                        aria-expanded="false"
+                        aria-label="Toggle search">
                         <span class="fas fa-search"></span>
                     </button>
                     

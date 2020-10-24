@@ -1,14 +1,5 @@
 #search-bar {
-    padding-top: 0;
-    height: 0;
-    overflow: hidden;
-    background: $brand-subtle-gray;
     transition: all 400ms ease-in-out;
-
-    &.active {
-        padding-top: 1rem;
-        height: 6.5vh;
-    }
 
     .search-form {
         position: relative;
@@ -17,10 +8,14 @@
 
         label {
             display: block;
+            margin-bottom: 0;
+            background: $brand-subtle-gray;
 
             input {
+                padding: 2rem 1rem;
                 border: none;
                 border-radius: 0;
+                background: $brand-subtle-gray;
             }
         }
 
