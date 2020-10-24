@@ -36,8 +36,12 @@
 
                     <?php if ( get_theme_mod( 'wp_bootstrap_starter_logo' ) ): ?>
 
-                        <a href="<?php echo esc_url( home_url( '/' )); ?>">
+                        <a class="logo" href="<?php echo esc_url( home_url( '/' )); ?>">
                             <img src="<?php echo esc_url(get_theme_mod( 'wp_bootstrap_starter_logo' )); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
+                        </a>
+
+                        <a class="mobile-logo" href="<?php echo esc_url( home_url( '/' )); ?>">
+                            <img src="<?php echo esc_url(get_theme_mod( 'wp_bootstrap_starter_mobile_logo' )); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
                         </a>
 
                     <?php endif; ?>

@@ -239,13 +239,24 @@ function wp_bootstrap_starter_customize_register( $wp_customize ) {
 
     // Add control for logo uploader
     $wp_customize->add_setting( 'wp_bootstrap_starter_logo', array(
-        //'default' => __( '', 'wp-bootstrap-starter' ),
+        'default' => __( '', 'wp-bootstrap-starter' ),
         'sanitize_callback' => 'esc_url',
     ) );
     $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'wp_bootstrap_starter_logo', array(
         'label'    => __( 'Upload Logo (replaces text)', 'wp-bootstrap-starter' ),
         'section'  => 'title_tagline',
         'settings' => 'wp_bootstrap_starter_logo',
+    ) ) );
+
+    // Add control for mobile logo uploader
+    $wp_customize->add_setting( 'wp_bootstrap_starter_mobile_logo', array(
+        'default' => __( '', 'wp-bootstrap-starter' ),
+        'sanitize_callback' => 'esc_url',
+    ) );
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'wp_bootstrap_starter_mobile_logo', array(
+        'label'    => __( 'Upload Logo for mobile (replaces text)', 'wp-bootstrap-starter' ),
+        'section'  => 'title_tagline',
+        'settings' => 'wp_bootstrap_starter_mobile_logo',
     ) ) );
 
 }
