@@ -25,12 +25,13 @@ $slug = $post->post_name;
                 <?php echo $event_date; ?>
             </div>
 
-            <div class="col-4">
+            <div class="col-4 event-title">
                 
                 <a data-toggle="collapse" href="#<?php echo $slug; ?>"
                     role="button" aria-expanded="false" aria-controls="collapse">
                     <?php the_title(); ?> <i class="fas fa-info-circle"></i>
                 </a>
+
             </div>
 
             <div class="col-2">
@@ -68,6 +69,12 @@ $slug = $post->post_name;
                 <?php the_content(); ?>
 
             </div>
+
+            <a class="btn btn-outline-primary close-event-btn" data-toggle="collapse" href="#<?php echo $slug; ?>"
+                role="button" aria-expanded="false" aria-controls="collapse">
+                    <?php esc_html_e( 'Aizvērt', 'wp-bootstrap-starter' ); ?>
+                    &nbsp;<i class="fas fa-arrow-up"></i>
+            </a>
 
         </div>
 
