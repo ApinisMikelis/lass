@@ -1,6 +1,18 @@
 #footer-widget {
     padding: 5rem 0;
 
+    .widget {
+        @include card;
+        padding: $padding;
+    }
+
+    .widget_text {
+        img {
+            margin: 0;
+            width: 100%;
+        }
+    }
+
     h3.widget-title {
         text-transform: uppercase;
     }
