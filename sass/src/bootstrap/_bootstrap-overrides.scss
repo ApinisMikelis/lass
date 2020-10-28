@@ -6,7 +6,8 @@ $theme-colors: (
 @include respond-below(md) {
 
     #content,
-    #masthead {
+    #masthead,
+    #footer-widget {
         .container, .container-sm {
             max-width: initial;
         }
