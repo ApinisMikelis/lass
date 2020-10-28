@@ -2,18 +2,45 @@
     padding: 5rem 0;
 
     .widget {
+
+        .widget-title {
+            padding-left: $padding;
+        }
+
         @include card;
-        padding: $padding;
+        padding: $small-padding;
+
+        ul.nav {
+            a {
+                padding: $padding;
+                border-radius: $border-radius;
+                transition: all 0.3s ease-in-out;
+
+                &:hover,
+                &.active {
+                    @include secondary-gradient;
+                    color: $brand-subtle-gray;
+                }
+            
+                @include respond-below(sm) {
+                    font-size: $font-larger;
+                }
+            
+            }
+        }
+
     }
 
     .widget_text {
         img {
+            padding: $padding;
             margin: 0;
             width: 100%;
         }
     }
 
     h3.widget-title {
+        margin-top: $margin;
         text-transform: uppercase;
     }
 
