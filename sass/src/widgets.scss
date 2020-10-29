@@ -30,36 +30,10 @@ aside#secondary {
             .nav-item,
             li {
                 a {
-                    display: block;
-                    padding: 0.5rem 1rem;
-                    position: relative;
-                    z-index: 1;
-                    font-size: 1rem;
-                    border-radius: $border-radius;
-
-                    &:hover {
-                        color: $brand-subtle-gray;
-                        text-decoration: none;
-                    }
+                    
                 }
 
-                a:hover::before {
-                    opacity: 1;
-                }
-
-                a::before {
-                    position: absolute;
-                    content: "";
-                    top: 0;
-                    right: 0;
-                    bottom: 0;
-                    left: 0;
-                    z-index: -1;
-                    transition: opacity 0.2s linear;
-                    border-radius: $border-radius;
-                    opacity: 0;
-                    @include secondary-gradient;
-                }
+                @include anchor-gradient-hover-effect;
 
                 &.current-menu-item,
                 &.current-page-ancestor {

@@ -11,22 +11,16 @@
         padding: $small-padding;
 
         ul.nav {
-            a {
-                padding: $padding;
-                border-radius: $border-radius;
-                transition: all 0.3s ease-in-out;
 
-                &:hover,
-                &.active {
-                    @include secondary-gradient;
-                    color: $brand-subtle-gray;
+            li {
+                a {
+                    @include respond-below(sm) {
+                        font-size: $font-larger;
+                    }
                 }
-            
-                @include respond-below(sm) {
-                    font-size: $font-larger;
-                }
-            
             }
+            
+            @include anchor-gradient-hover-effect;
         }
 
     }
@@ -35,8 +29,27 @@
         img {
             padding: $padding;
             margin: 0;
-            width: 100%;
+            width: 60%;
+
+            @include respond-above(sm) {
+                width: 100%;
+            }
         }
+
+        @include respond-below(md) {
+            p {
+                
+                padding: 0 $padding;
+                font-size: $font-larger;
+            }
+        }
+
+        @include respond-below(sm) {
+            p {
+                font-size: $font-larger;
+            }
+        }
+        
     }
 
     h3.widget-title {

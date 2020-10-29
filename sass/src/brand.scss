@@ -53,3 +53,38 @@ $font-larger: 1.2rem;
         #a86373
     );
 }
+
+@mixin anchor-gradient-hover-effect {
+
+    a {
+        display: block;
+        padding: $small-padding $padding;
+        position: relative;
+        z-index: 1;
+        font-size: 1rem;
+        border-radius: $border-radius;
+    }
+
+    a:hover,
+    a.active {
+        color: $brand-subtle-gray;
+    }
+
+    a:hover::before {
+        opacity: 1;
+    }
+
+    a::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        transition: opacity 0.2s linear;
+        border-radius: $border-radius;
+        opacity: 0;
+        @include secondary-gradient;
+    }
+}
