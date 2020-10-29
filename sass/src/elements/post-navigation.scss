@@ -1,9 +1,13 @@
-.posts-navigation {
+.post-navigation {
     .nav-links {
         .nav-next,
         .nav-previous {
             @include main-font;
             font-size: 1.2rem;
+            
+            a {
+                display: block;
+            }
 
             a:hover {
                 text-decoration: none;
@@ -16,16 +20,6 @@
             }
         }
 
-        .nav-previous {
-            a::before {
-                @include arrow-left-icon;
-            }
-        }
 
-        .nav-next {
-            a::after {
-                @include arrow-right-icon;
-            }
-        }
     }
 }
