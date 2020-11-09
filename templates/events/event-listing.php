@@ -34,7 +34,7 @@ $slug = $post->post_name;
 
             </div>
 
-            <div class="col col-md-2 d-none d-sm-none d-md-block">
+            <div class="col col-md-2">
 
                 <?php if ($results_url) : ?>
 
@@ -65,20 +65,6 @@ $slug = $post->post_name;
         <div class="row event-details bg-light collapse" id="<?php echo $slug; ?>">
 
             <div class="col-12">
-
-                <div class="results-block d-block d-sm-block d-md-none">
-
-                    <?php if ($results_url) : ?>
-
-                        <i class="fas fa-award"></i>
-
-                        <a href="<?php echo $results_url; ?>" target="_blank">
-                            <?php echo __( 'Rezultāti', 'wp-bootstrap-starter' ); ?>
-                        </a>
-
-                    <?php endif; ?>
-                
-                </div>
             
                 <?php the_content(); ?>
 
