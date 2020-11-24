@@ -71,3 +71,17 @@
 
     }
 }
+
+.site-footer {
+    @include respond-below(sm) {
+        .site-info {
+            font-size: 1.2rem;
+        }
+    }
+
+    @include respond-below(xs) {
+        .site-info {
+            text-align: center;
+        }
+    }
+}
