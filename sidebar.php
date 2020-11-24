@@ -14,7 +14,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 
 <aside id="secondary" class="widget-area col-sm-12 col-lg-3 " role="complementary">
 
-	<button class="sidebar-nav-toggler btn btn-light btn-block  d-lg-none"
+	<button class="sidebar-nav-toggler btn btn-light btn-block d-lg-none collapsed"
 		type="button"
 		data-toggle="collapse"
 		data-target="#menu-wrap"
@@ -26,7 +26,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 		<i class="fas fa-chevron-up"></i>
 	</button>
 
-	<div id="menu-wrap" class="collapse show">
+	<div id="menu-wrap" class="collapse ">
 		<?php dynamic_sidebar( 'sidebar-1' ); ?>
 	</div>
 </aside>
