@@ -1,0 +1,84 @@
+@mixin icon-styling {
+    @include icon;
+    position: absolute;
+    width: 100%;
+    font-size: 1.35rem;
+    text-align: center;
+    color: $brand-subtle-gray;
+}
+
+#fancybox-wrap {
+    
+    #fancybox-close {
+        background: $brand-main;
+        border-radius: 50%;
+
+        &::before {
+            @include close;
+            @include icon-styling;
+
+            line-height: 1.85rem;
+
+            @include respond-below(md) {
+                line-height: 2.4rem;
+            }
+        }
+
+        &:hover {
+            background: $brand-dark;
+        }
+    }
+
+    #fancybox-right-ico,
+    #fancybox-left-ico {
+        background: $brand-main;
+        border-radius: 50%;
+        transition: background 300ms;
+        @include icon;
+
+        &:hover {
+            background: $brand-dark;
+        }
+
+        &::before {
+            line-height: 1.85rem;
+            @include icon-styling;
+        }
+    }
+
+    #fancybox-right-ico {
+        &::before {
+            @include arrow-right-icon;
+        }
+    }
+
+    #fancybox-left-ico {
+        &::before {
+            @include arrow-left-icon;
+        }
+    }
+
+    @include respond-below(md) {
+        #fancybox-left,
+        #fancybox-right {
+            
+
+            #fancybox-left-ico {
+                &::before {
+                    line-height: 2.4rem;
+                }
+
+                left: 2rem;
+            }
+
+            #fancybox-right-ico {
+                &::before {
+                    line-height: 2.4rem;
+                }
+                
+                right: 2rem;
+            }
+        }
+    }
+
+}
