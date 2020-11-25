@@ -1,0 +1,30 @@
+#cd-timeline {
+
+    &.timeline-express {
+        margin-top: 0;
+    }
+
+    .cd-timeline-content {
+        @include card;
+        overflow: visible;
+
+        .timeline-date {
+            color: $brand-main;
+            font-weight: 600;
+            font-size: 1.5rem;
+            font-style: initial;
+        }
+
+        .the-excerpt {
+            p {
+                font-size: 1.2rem;
+            }
+
+            .timeline-express-read-more-link {
+                margin-top: $margin;
+            }
+        }
+
+    }
+
+}

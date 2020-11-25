@@ -15,4 +15,10 @@ jQuery(document).ready(function () {
         e.preventDefault();
         jQuery("html, body").animate({ scrollTop: 0 }, "300");
     });
+
+    // Timeline Express DOM manipulations
+    jQuery("a.timeline-express-read-more-link").each(function () {
+        jQuery(this).addClass('btn btn-outline-primary');
+        jQuery(this).text('Vairāk par pasākumu');
+    });
 });

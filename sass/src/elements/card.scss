@@ -1,7 +1,7 @@
 @mixin card {
     overflow: hidden;
     background: white;
-    box-shadow: 0 10px 30px $brand-gray;
+    box-shadow: 0 10px 30px $brand-gray !important;
     border: none;
     border-radius: 0.5rem;
 }
