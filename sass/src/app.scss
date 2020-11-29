@@ -6,11 +6,9 @@
 @import "mobile";
 @import "icons";
 @import "startup";
-
+@import "animation";
 
 @import "node_modules/bootstrap/scss/bootstrap";
-
-
 
 // Elements
 @import "elements/card";
@@ -24,6 +22,7 @@
 @import "elements/back-to-top-btn";
 @import "elements/footer";
 @import "elements/fancybox";
+@import "elements/load-more-btn";
 
 // Modules
 @import "site-header";
@@ -45,4 +44,12 @@ body {
 
 .dev-notices {
     padding-top: $padding;
+}
+
+.home {
+    #main {
+        .card {
+            @include fade-in-animation;
+        }
+    }
 }
