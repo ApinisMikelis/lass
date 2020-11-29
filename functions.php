@@ -95,6 +95,11 @@ function wp_bootstrap_starter_reminder(){
 add_action( 'admin_notices', 'wp_bootstrap_starter_reminder' );
 
 /**
+ * Add ajax load more functionality
+ */
+require get_template_directory() . '/inc/ajax-load-more.php';
+
+/**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
  * Priority 0 to make it available to lower priority callbacks.

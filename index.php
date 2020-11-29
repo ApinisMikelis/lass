@@ -42,16 +42,24 @@ get_sidebar();
 
 			endwhile;
 
-			get_template_part('templates/posts-navigation');
-
 		else :
 
 			get_template_part( 'template-parts/content', 'none' );
 
 		endif; ?>
 
-		</main><!-- #main -->
-	</section><!-- #primary -->
+		</main>
+
+		<?php if (  $wp_query->max_num_pages > 1 ) : ?>
+
+			<a class="load-more btn btn-outline-primary">
+				<i class="fas fa-arrow-down"></i>
+				<?php echo __('Ielādēt vairāk', 'audiologopedi'); ?>
+			</a>
+
+		<?php endif; ?>
+
+	</section>
 
 <?php
 
