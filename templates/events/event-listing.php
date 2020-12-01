@@ -9,6 +9,7 @@
 
 $location = get_field('location');
 $event_date = get_field('event-date');
+$event_end_date = get_field('event-end-date');
 $event_time = get_field('event-time');
 $results_url = get_field('results');
 $slug = $post->post_name;
@@ -22,7 +23,7 @@ $slug = $post->post_name;
         <div class="row event-heading">
 
             <div class="col col-12 col-sm-4 col-md-3">
-                <?php echo $event_date; ?>
+                <?php echo $event_date; echo $event_end_date ?  ' - ' . $event_end_date : ''; ?>
             </div>
 
             <div class="col col-12 col-sm-4 col-md-4 event-title">
