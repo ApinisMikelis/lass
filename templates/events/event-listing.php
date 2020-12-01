@@ -39,10 +39,11 @@ $slug = $post->post_name;
 
                 <?php if ($results_url) : ?>
 
-                    <i class="fas fa-award"></i>
-
                     <a href="<?php echo $results_url; ?>" target="_blank">
+                    
+                        <i class="fas fa-award"></i>
                         <?php echo __( 'Rezultāti', 'wp-bootstrap-starter' ); ?>
+                
                     </a>
 
                 <?php endif; ?>
@@ -51,13 +52,13 @@ $slug = $post->post_name;
 
             <div class="col col-12 col-sm-4 col-md-3">
 
-                <i class="fas fa-map-marker-alt"></i>
 
-                <?php if ($location) :
+                <?php if ($location) : ?>
                 
-                    echo $location; 
+                    <i class="fas fa-map-marker-alt"></i>
+                    <?php echo $location; ?>
                 
-                endif; ?>
+                <?php endif; ?>
 
             </div>
 
