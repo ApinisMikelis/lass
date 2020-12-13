@@ -52,6 +52,12 @@
         
     }
 
+    .widget_archive {
+        .nav-item {
+            text-transform: capitalize;
+        }
+    }
+
     h3.widget-title {
         margin-top: $margin;
         text-transform: uppercase;
