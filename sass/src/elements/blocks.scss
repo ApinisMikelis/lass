@@ -7,3 +7,14 @@
         }
     }
 }
+
+.wp-block-file {
+    a {
+        display: block;
+
+        &.wp-block-file__button {
+            width: max-content;
+            margin: $small-margin 0 0 0;
+        }
+    }
+}
