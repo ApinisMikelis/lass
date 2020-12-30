@@ -1,3 +1,5 @@
+
+
 <?php
 /**
  * WP Bootstrap Starter functions and definitions
@@ -262,6 +264,11 @@ require get_template_directory() . '/inc/extras.php';
 require get_template_directory() . '/inc/customizer.php';
 
 /**
+ * Wordpress modifications
+ */
+require get_template_directory() . '/inc/wp-mods/archive-title.php';
+
+/**
  * Load plugin compatibility file.
  */
 require get_template_directory() . '/inc/plugin-compatibility/plugin-compatibility.php';
@@ -320,3 +327,4 @@ function get_current_template( $echo = false ) {
     else
         return $GLOBALS['current_theme_template'];
 }
+

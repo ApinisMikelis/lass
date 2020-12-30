@@ -18,10 +18,9 @@ get_sidebar();
 		if ( have_posts() ) : ?>
 
 			<header class="page-header">
-				<?php
-					the_archive_title( '<h1 class="page-title archive-title">', '</h1>' );
-					the_archive_description( '<div class="archive-description">', '</div>' );
-				?>
+				<h1 class="page-title archive-title">
+					<?php the_archive_title(); ?>
+				</h1>
 			</header>
 
 			<?php
