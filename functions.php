@@ -279,6 +279,16 @@ require get_template_directory() . '/inc/plugin-compatibility/plugin-compatibili
 require get_template_directory() . '/inc/admin-settings.php';
 
 /**
+ * Add custom post types
+ */
+require get_template_directory() . '/inc/custom-post-types.php';
+
+/**
+ * Add custom post type taxonomies
+ */
+require get_template_directory() . '/inc/custom-post-type-taxonomies.php';
+
+/**
  * Custom archive widget
  */
 require get_template_directory() . '/inc/widgets/archive-widget.php';
