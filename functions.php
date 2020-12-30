@@ -272,6 +272,11 @@ require get_template_directory() . '/inc/plugin-compatibility/plugin-compatibili
 require get_template_directory() . '/inc/admin-settings.php';
 
 /**
+ * Custom archive widget
+ */
+require get_template_directory() . '/inc/widgets/archive-widget.php';
+
+/**
  * Load custom WordPress nav walker.
  */
 if ( ! class_exists( 'wp_bootstrap_navwalker' )) {
