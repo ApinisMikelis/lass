@@ -9,7 +9,11 @@ if(!empty($categories)) : ?>
 
         <?php foreach ($categories as $cat) : $cat_link = get_term_link($cat->term_id); ?>
 
-            <a class="category" href="<?php echo $cat_link; ?>"><?php echo $cat->name; ?></a>
+            <?php if ($cat->slug != 'bez-kategorijas') : ?>
+
+                <a class="category" href="<?php echo $cat_link; ?>"><?php echo $cat->name; ?></a>
+
+            <?php endif; ?>
 
         <?php endforeach; ?>
 
