@@ -7,22 +7,33 @@
     .cd-timeline-content {
         @include card;
         overflow: visible;
+        padding: 0;
 
-        .timeline-date {
-            color: $brand-main;
-            font-weight: 600;
-            font-size: 1.5rem;
-            font-style: initial;
+        .timeline-container-image {
+            border-top-left-radius: 0.5rem;
+            border-top-right-radius: 0.5rem;
+            overflow: hidden;
         }
 
-        .the-excerpt {
-            p {
-                font-size: 1.2rem;
+        .cd-timeline-title-container {
+            padding: $large-padding;
+
+            .timeline-date {
+                width: max-content;
+                padding: $small-padding;
+                margin-bottom: $margin;
+                font-weight: 600;
+                font-size: 1.5rem;
+                font-style: initial;
+                background: $brand-main;
+                color: $brand-subtle-gray;
             }
 
-            .timeline-express-read-more-link {
-                margin-top: $margin;
+            .cd-timeline-item-title {
+                padding: 0;
+                margin-bottom: $margin;
             }
+        
         }
 
     }
