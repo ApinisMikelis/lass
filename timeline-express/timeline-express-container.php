@@ -10,6 +10,7 @@ global $post;
 
 $timeline_express_options = timeline_express_get_options();
 $read_more_params = array('post-id' => $post->ID);
+$end_date = get_field('event-end-date', $post->ID);
 
 ?>
 
@@ -41,6 +42,8 @@ $read_more_params = array('post-id' => $post->ID);
 					do_action( 'timeline-express-before-date' );
 
 					echo wp_kses_post( timeline_express_get_announcement_date( $post->ID ) );
+
+					echo $end_date ? ' - ' . $end_date : '';
 
 					do_action( 'timeline-express-after-date' );
 					?>
