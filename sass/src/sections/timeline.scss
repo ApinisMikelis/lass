@@ -6,8 +6,10 @@
 
     .cd-timeline-block {
 
-        &:not(:first-child) {
-            margin-top: -15rem;
+        @media only screen and (min-width: 822px) {
+            &:not(:first-child) {
+                margin-top: -15rem;
+            }
         }
 
         .cd-timeline-content {
@@ -23,11 +25,12 @@
     
             .cd-timeline-title-container {
                 padding: $large-padding;
+                text-align: center;
     
                 .timeline-date {
                     width: max-content;
                     padding: $small-padding $padding;
-                    margin-bottom: $margin;
+                    margin: 0 auto $margin auto;
                     font-weight: 600;
                     font-size: 1.5rem;
                     font-style: initial;
@@ -38,7 +41,7 @@
     
                 .cd-timeline-item-title {
                     padding: 0;
-                    margin-bottom: $margin;
+                    margin: $large-margin 0;
                 }
             
             }
