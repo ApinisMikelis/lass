@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 global $post;
 
 $timeline_express_options = timeline_express_get_options();
-$read_more_url = get_field('description-url', $post->ID);
+$read_more_params = array('post-id' => $post->ID);
 
 ?>
 
@@ -17,25 +17,20 @@ $read_more_url = get_field('description-url', $post->ID);
 
 	<?php echo wp_kses_post( timeline_express_get_announcement_icon_markup( $post->ID ) ); ?>
 
-
-
 	<div class="cd-timeline-content">
 
 		<?php do_action( 'timeline-express-container-top' ); ?>
 
 		<div class="timeline-container-image">
-			<a href="<?php echo $read_more_url; ?>">
-				<?php
+			<?php
 
-				do_action( 'timeline-express-before-image' );
+			do_action( 'timeline-express-before-image' );
 
-				echo wp_kses_post( timeline_express_get_announcement_image( $post->ID, 'full' ) );
+			echo wp_kses_post( timeline_express_get_announcement_image( $post->ID, 'full' ) );
 
-				do_action( 'timeline-express-after-image' );
+			do_action( 'timeline-express-after-image' );
 
-				?>
-			</a>
-
+			?>
 		</div>
 
 		<div class="cd-timeline-title-container">
@@ -60,14 +55,10 @@ $read_more_url = get_field('description-url', $post->ID);
 
 			<?php do_action( 'timeline-express-after-title' ); ?>
 
-			<a class="btn btn-outline-primary d-block" href="<?php echo $read_more_url; ?>">
-				<?php echo __('Vairāk par pasākumu', 'wp-bootstrap-starter'); ?>
-			</a>
+			<?php get_template_part( 'timeline-express/timeline-express-event-link', $read_more_params); ?>
 
 			<?php do_action( 'timeline-express-container-bottom' ); ?>
 		</div>
-
-		
 
 	</div>
 
