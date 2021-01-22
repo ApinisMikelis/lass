@@ -58,7 +58,7 @@ $end_date = get_field('event-end-date', $post->ID);
 
 			<?php do_action( 'timeline-express-after-title' ); ?>
 
-			<?php get_template_part( 'timeline-express/timeline-express-event-link', $read_more_params); ?>
+			<?php get_template_part( 'timeline-express/timeline-express-event-link', '', $read_more_params); ?>
 
 			<?php do_action( 'timeline-express-container-bottom' ); ?>
 		</div>
