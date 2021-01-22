@@ -4,36 +4,45 @@
         margin-top: 0;
     }
 
-    .cd-timeline-content {
-        @include card;
-        overflow: visible;
-        padding: 0;
+    .cd-timeline-block {
 
-        .timeline-container-image {
-            border-top-left-radius: 0.5rem;
-            border-top-right-radius: 0.5rem;
-            overflow: hidden;
+        &:not(:first-child) {
+            margin-top: -15rem;
         }
 
-        .cd-timeline-title-container {
-            padding: $large-padding;
-
-            .timeline-date {
-                width: max-content;
-                padding: $small-padding;
-                margin-bottom: $margin;
-                font-weight: 600;
-                font-size: 1.5rem;
-                font-style: initial;
-                background: $brand-main;
-                color: $brand-subtle-gray;
+        .cd-timeline-content {
+            @include card;
+            overflow: visible;
+            padding: 0;
+    
+            .timeline-container-image {
+                border-top-left-radius: 0.5rem;
+                border-top-right-radius: 0.5rem;
+                overflow: hidden;
             }
-
-            .cd-timeline-item-title {
-                padding: 0;
-                margin-bottom: $margin;
+    
+            .cd-timeline-title-container {
+                padding: $large-padding;
+    
+                .timeline-date {
+                    width: max-content;
+                    padding: $small-padding $padding;
+                    margin-bottom: $margin;
+                    font-weight: 600;
+                    font-size: 1.5rem;
+                    font-style: initial;
+                    background: $brand-main;
+                    color: $brand-subtle-gray;
+                    border-radius: 0.5rem;
+                }
+    
+                .cd-timeline-item-title {
+                    padding: 0;
+                    margin-bottom: $margin;
+                }
+            
             }
-        
+    
         }
 
     }
