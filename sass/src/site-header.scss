@@ -8,12 +8,18 @@
         }
     }
 
+    > .container {
+        margin: 0 auto;
+    }
+
     .navbar-brand {
+        margin: 0;
+
         a {
             display: block;
 
             img {
-                width: 100%;
+                width: 85%;
             }
 
             &.mobile-logo {
@@ -99,21 +105,21 @@
     .navbar-nav {
         @mixin main-menu-hover {
             color: $brand-subtle-gray;
-            border-bottom: 3px solid $brand-subtle-gray;
+            opacity: 1;
         }
 
-        margin-right: $margin;
+        margin-right: $large-margin;
 
         li {
             &:not(:last-child) {
-                margin-right: 1rem;
+                margin-right: 1.5rem;
             }
 
             a {
+                opacity: 0.75;
                 color: $brand-gray;
-                padding: 0.5rem;
+                padding: 0.5rem 0;
                 font-size: $font-larger;
-                border-bottom: 3px solid transparent;
 
                 transition: all 300ms ease-in-out;
 
@@ -184,28 +190,25 @@
 
         @include respond-below(sm) {
             li.menu-item {
-
                 display: block;
-
-
-
             }
         }
 
         @include respond-below(md) {
+            margin: 0;
+
             li.menu-item {
-
-
+                margin: 0;
                 a {
                     font-size: $mobile-font-size;
+                    padding: $small-padding $padding;
                 }
-
             }
         }
 
         @include respond-below(lg) {
             display: block;
-            padding-top: $small-padding;
+            padding-top: $padding;
             
             li {
                 display: inline-block;
